@@ -3,6 +3,8 @@
 
 # vim: filetype=ruby
 
+require 'tanraku'
+
 host_os = RbConfig::CONFIG['host_os']
 
 case host_os
