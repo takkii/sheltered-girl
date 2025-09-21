@@ -11,10 +11,10 @@ require 'version'
 class VersionTest < Minitest::Test
   def test_version
     @v1 = EngineLeft.version
-    zinbeijett_version = '5.0.0'
+    version = '5.0.0'
     t = Date.today
     build_day = t.strftime('%Y.%m.%d')
-    @v2 = "#{zinbeijett_version}-#{build_day}".freeze
+    @v2 = "#{version}-#{build_day}".freeze
 
     refute_equal(@v1, @v2)
     assert_operator(@v1, :<, @v2)
