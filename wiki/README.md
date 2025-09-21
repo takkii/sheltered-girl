@@ -26,7 +26,7 @@ FullW(msg = false, wsl_dir = '/mnt/c/Users/username', msg_dir = '/mini_test/')
 
 ### 短絡の仕様
 
-```markdown
+```ruby
 # 独自例外を発生し、次の処理に転移します
 Object.tanraku
 
@@ -38,33 +38,45 @@ Object.tanraku_execute
 
 # 短絡のログを記録します
 Object.tanraku_log
+```
 
-# 同機能を関数として使用できます。
+#### 同機能を関数として使用できます。
+
+```markdown
 tanraku
 tanraku_exit
 tanraku_execute
 tanraku_log
-tanraku_match (新機能)🆙
+```
 
-# 新機能の詳細
-tanraku_match(str_tanraku, match_tanraku, process_tanraku)
+#### tanraku_matchの詳細
+
+```markdown
+tanraku_match(比較先, 正規表現, 実行する処理)
+```
+
+#### tanraku_matchの明示的な型
+
+```markdown
 tanraku_match(String, String, None)
+```
 
-# 新機能の定義
-str_tanraku = ''
-match_tanraku = ''
-process_tanraku
+#### tanraku_match 使用例 (常に発動)
 
-# 使用例、常に発動
+```ruby
 require 'tanraku'
-tanraku_match('あいうえお', '/あ/o', tanraku_execute)
 
-# 使用例の出力結果
-...
+tanraku_match('あいうえお', '/あ/o', tanraku_execute)
+```
+
+#### 使用例の出力結果
+
+```markdown
+# ... backtrace 表示
 TypeError : exception class/object expected
 --> Tanraku_Execute Method Exception
 ```
 
 ※ Tanraku_VERSION: 1.1.4
 
-_更新履歴 : 2025/09/17_
+_更新履歴 : 2025/09/21_
