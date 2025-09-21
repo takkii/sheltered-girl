@@ -8,6 +8,18 @@ require "#{File.dirname(__FILE__)}/../req/speak"
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
+host_os = RbConfig::CONFIG['host_os']
+
+case host_os
+  when /mswin|msys|mingw|cygwin|bccwin|wince|emc/
+    begin
+      tanraku_execute
+    ensure
+      GC.auto_compact
+  end
+end
+
+
 class Emerald
   attr_accessor :fibonacci, :fizzbizz, :version, :kurage
 
@@ -75,8 +87,6 @@ end
 
 puts ''
 puts 'helpを入力またはTab補完で実行しましょう!'
-
-# search words
 
 begin
   str = %w[sessi kashi exit help].map!(&:freeze).freeze
@@ -1109,7 +1119,7 @@ rss         RSS投稿時間帯を判別します
       rescue StandardError => s
         puts s.backtrace
         tanraku_execute
-      
+
       ensure
         puts '正解は' + x.to_s + 'でした'
         puts ''
