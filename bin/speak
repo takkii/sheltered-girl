@@ -3,11 +3,6 @@
 
 # vim: filetype=ruby
 
-require "#{File.dirname(__FILE__)}/../req/speak"
-
-lib = File.expand_path('lib', __dir__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-
 host_os = RbConfig::CONFIG['host_os']
 
 case host_os
@@ -19,6 +14,10 @@ case host_os
   end
 end
 
+require "#{File.dirname(__FILE__)}/../req/speak"
+
+lib = File.expand_path('lib', __dir__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 class Emerald
   attr_accessor :fibonacci, :fizzbizz, :version, :kurage
