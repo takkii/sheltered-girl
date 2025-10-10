@@ -4,7 +4,7 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require "#{File.dirname(__FILE__)}/req/rubygems"
-require 'gem_version'
+require 'core'
 
 Gem::Specification.new do |s|
   s.name = "sheltered-girl"
@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.required_ruby_version = ['>= 3.0']
-  s.required_rubygems_version = '~> 3.6.9' if s.respond_to? RbGemversion::VERSION
+  s.required_rubygems_version = '~> 3.6.9' if s.respond_to? CoreNYM.gem_version
   s.summary = "This is a console application, a remake of zinbeiw."
   s.description = "箱入り娘, All in One Packages."
   s.metadata["github_repo"] = "https://github.com/takkii/sheltered-girl"
@@ -39,6 +39,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency('simplecov', '~> 0.22')
   s.add_runtime_dependency('rinku', '~> 2.0')
   s.add_runtime_dependency('sanitize', '~> 7.0')
+  s.add_runtime_dependency('grouse', '~> 1.0')
 
   if s.respond_to? :specification_version
     s.specification_version = 4
