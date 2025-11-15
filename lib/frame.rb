@@ -113,6 +113,19 @@ module Heart
     end
   end
 
+  def appmakerbr
+    require 'install'
+    begin
+      InstallerRunner.app_maker_branches
+    rescue LoadError => e
+      puts e.backtrace
+    ensure
+      GC.compact
+    end
+  end
+
+
+
   def default
     str = 'nyasocom_frame is a framework for generating web applications. '
     puts str
@@ -155,7 +168,10 @@ heat db postgresql
 heat db --pg
 
 # github project templete generated
-heat make nyasocom takkii/nyasocom_oss
+heat make nyasocom takkii nyasocom_oss
+
+# github project templete generated + branch_name
+heat branch nyasocom takkii nyasocom_oss main
 
 # HELP
 heat -h
@@ -164,6 +180,7 @@ EOS
 end
 
 a = /\Aapp\z/
+b = /\Abranch\z/
 c = /\Acreate\z/
 d = /\Adb\z/
 h = /\A[-][h]\z/
@@ -183,6 +200,8 @@ if one.nil?
   default
 elsif one.match?(a)
   nyasocom_app_downloader
+elsif one.match?(b)
+  appmakerbr
 elsif one.match?(c)
   creater
 elsif one.match?(h)
