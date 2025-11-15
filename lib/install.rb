@@ -12,7 +12,7 @@ class InstallerRunner
     encoding_style
     nyasocom_custom_name
   end
-  
+
   def self.create
     encoding_style
     nyasocom_sun_custom_name
@@ -48,6 +48,11 @@ class InstallerRunner
     app_maker
   end
 
+  def self.app_maker_branches
+    encoding_style
+    app_maker_branch
+  end
+
   def self.database
     encoding_style
     two = ARGV[1]
@@ -64,7 +69,7 @@ heat db postgresql
 
 heat db --pg
 
-EOF
+      EOF
     elsif two.match?(pt)
       postgresql
     elsif two.match?(pg)
@@ -91,13 +96,13 @@ EOF
     end
     FileUtils.rm_rf("./.git")
     FileUtils.rm_rf("./.github")
-        puts <<-EOF
+    puts <<-EOF
 
 Used nyasocom_frame to clone nyasocom_oss with any project name.
 
-EOF
+    EOF
   end
-  
+
   def self.nyasocom2_custom_name
     two = ARGV[1]
     FileUtils.mkdir_p("./#{two}")
@@ -108,11 +113,11 @@ EOF
     end
     FileUtils.rm_rf("./.git")
     FileUtils.rm_rf("./.github")
-        puts <<-EOF
+    puts <<-EOF
 
 Used nyasocom_frame to clone nyasocom2 with any project name.
 
-EOF
+    EOF
   end
 
   def self.nyasocom_sun_custom_name
@@ -125,11 +130,11 @@ EOF
     end
     FileUtils.rm_rf("./.git")
     FileUtils.rm_rf("./.github")
-        puts <<-EOF
+    puts <<-EOF
 
 Used nyasocom_frame to clone nyasocom_sun_pg_win with any project name.
 
-EOF
+    EOF
   end
 
   def self.nyasocom_command
@@ -144,7 +149,7 @@ EOF
 
 Cloned nyasocom_oss with nyasocom_frame.
 
-EOF
+    EOF
   end
 
   def self.postgresql
@@ -159,8 +164,8 @@ EOF
 
 Cloned nyasocom_pg with nyasocom_frame.
 
-EOF
-end
+    EOF
+  end
 
   def self.nyasocom2_command
     if system('git clone git@github.com:takkii/nyasocom2.git', exception: true)
@@ -174,7 +179,7 @@ end
 
 Cloned nyasocom2 with nyasocom_frame.
 
-EOF
+    EOF
   end
 
   def self.nyasocom3_command
@@ -189,8 +194,8 @@ EOF
 
 Cloned nyasocom_sun_pg_win with nyasocom_frame.
 
-EOF
-end
+    EOF
+  end
 
   def self.nyasocom_app_command
     if system('git clone git@github.com:takkii/nyasocom_sun_app.git', exception: true)
@@ -204,26 +209,48 @@ end
 
 Cloned nyasocom_sun_app with nyasocom_frame.
 
-EOF
+    EOF
   end
 
   def self.app_maker
     encoding_style
     flh = ARGV[1]
-    gph = ARGV[2]
+    ghn = ARGV[2]
+    gpp = ARGV[3]
     FileUtils.mkdir_p("./#{flh}")
     FileUtils.cd("./#{flh}")
-    if system("git clone git@github.com:#{gph}.git .", exception: true)
+    if system("git clone git@github.com:#{ghn}/#{gpp}.git .", exception: true)
     else
-      system("git clone https://github.com:#{gph}.git .")
+      system("git clone https://github.com:#{ghn}/#{gpp}.git .")
     end
     FileUtils.rm_rf("./.git")
     FileUtils.rm_rf("./.github")
     puts <<-EOF
 
-Cloned GitHub project with app-maker.
+Cloned GitHub project with #{ghn}.
 
-EOF
+    EOF
+  end
+
+  def self.app_maker_branch
+    encoding_style
+    flh = ARGV[1]
+    ghn = ARGV[2]
+    gpp = ARGV[3]
+    branch = ARGV[4]
+    FileUtils.mkdir_p("./#{flh}")
+    FileUtils.cd("./#{flh}")
+    if system("git clone -b #{branch} git@github.com:#{ghn}/#{gpp}.git .", exception: true)
+    else
+      system("git clone -b #{branch} https://github.com:#{ghn}/#{gpp}.git .")
+    end
+    FileUtils.rm_rf("./.git")
+    FileUtils.rm_rf("./.github")
+    puts <<-EOF
+
+Cloned GitHub project with user/#{ghn} project/#{gpp} branch/#{branch}.
+
+    EOF
   end
 end
 
