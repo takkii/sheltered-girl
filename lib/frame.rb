@@ -171,7 +171,7 @@ heat db --pg
 heat make nyasocom takkii nyasocom_oss
 
 # github project templete generated + branch_name
-heat make nyasocom takkii nyasocom_oss main
+heat branch nyasocom takkii nyasocom_oss main
 
 # HELP
 heat -h
@@ -180,6 +180,7 @@ EOS
 end
 
 a = /\Aapp\z/
+b = /\Abranch\z/
 c = /\Acreate\z/
 d = /\Adb\z/
 h = /\A[-][h]\z/
@@ -199,6 +200,8 @@ if one.nil?
   default
 elsif one.match?(a)
   nyasocom_app_downloader
+elsif one.match?(b)
+  appmakerbr
 elsif one.match?(c)
   creater
 elsif one.match?(h)
