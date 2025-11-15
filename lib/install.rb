@@ -227,7 +227,7 @@ Cloned nyasocom_sun_app with nyasocom_frame.
     FileUtils.rm_rf("./.github")
     puts <<-EOF
 
-Cloned GitHub project with user/#{ghn} project/#{gpp}.
+Cloned GitHub with user/#{ghn} project/#{gpp}.
 
     EOF
   end
@@ -248,7 +248,7 @@ Cloned GitHub project with user/#{ghn} project/#{gpp}.
     FileUtils.rm_rf("./.github")
     puts <<-EOF
 
-Cloned GitHub project with user/#{ghn} project/#{gpp} branch/#{branch}.
+Cloned GitHub with user/#{ghn} project/#{gpp} branch/#{branch}.
 
     EOF
   end
