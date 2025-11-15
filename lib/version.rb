@@ -4,7 +4,7 @@
 class EngineLeft
   def self.version
     # 'x.x.x.x'.to_s < '5.x.x.x'.to_s
-    '4.0.6'.to_s
+    '4.0.7'.to_s
   end
 end
 
