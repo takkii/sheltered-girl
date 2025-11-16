@@ -81,11 +81,6 @@ heat db --pg
 
   private
 
-  def self.encoding_style
-    Encoding.default_internal = 'UTF-8'
-    Encoding.default_external = 'UTF-8'
-  end
-
   def self.nyasocom_custom_name
     one = ARGV[1]
     FileUtils.mkdir_p("./#{one}")
