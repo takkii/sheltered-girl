@@ -3,10 +3,9 @@
 <br /><br />
 
 <div align="center">
-  <p> Rename sheltered-girl, old name zinbeijett. </p>
-  <p> Copyright &copy 2013-2025 Takayuki Kamiyama. </p>
-  <p> Copyright © 2026 Team 'Red Eyes, Black Dragon.' </p>
-  <p> Please readme, See the <a href="https://github.com/takkii/sheltered-girl/wiki/manual">wiki</a> for how to use zinbeijett. </p>
+  <p><h1> Sheltered-girl. </h1></p>
+  <img src="./images/nyasocom_two.gif" alt="にゃそこん２のイラストをデータ加工しました。">
+  <p><h3> Please README, See the <a href="https://github.com/takkii/sheltered-girl/wiki/manual">wiki</a>.</h3></p>
 </div>
 
 <br />
