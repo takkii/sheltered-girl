@@ -243,7 +243,7 @@ Cloned GitHub with user/#{ghn} project/#{gpp}.
     FileUtils.rm_rf("./.github")
     puts <<-EOF
 
-Cloned GitHub with user/#{ghn} project/#{gpp} branch/#{branch}.
+Cloned Folder/#{flh} GitHub with user/#{ghn} project/#{gpp} branch/#{branch}.
 
     EOF
   end

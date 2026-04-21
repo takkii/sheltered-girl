@@ -6,7 +6,7 @@ require 'tanraku'
 class EngineLeft
   def self.version
     # 'x.x.x.x'.to_s < '5.x.x.x'.to_s
-    '4.0.7.1'.to_s
+    '4.0.7.2'.to_s
   end
 end
 
