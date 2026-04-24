@@ -8,7 +8,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "#{File.dirname(__FILE__)}/../req/sheltered-girl"
 
 # sheltered-girl loads.
-module Sheltered-girl
+module Sheltered_girl
   module_function
 
   def version
@@ -288,7 +288,7 @@ module Sheltered-girl
   end
 end
 
-include Sheltered-girl
+include Sheltered_girl
 
 v = /\Aversion|\A-v\z/
 h = /\Alicense|\A-l\z/
