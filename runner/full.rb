@@ -22,9 +22,15 @@ class MiniTestFile
       # Don't have Macintosh PC.
     when /linux/
       begin
-        # FullW, Switch ON / (true, string, string).
-        @mini_test = FullW(true, '/mnt/c/Users/sudok', '/GitHub/sheltered-girl/mini_test')
-        @mini_unit = FullW(true, '/mnt/c/Users/sudok', '/GitHub/sheltered-girl/mini_unit')
+        if Dir.exist?('/mnt/c/Users/sudok')
+          # FullW, Switch ON / (true, string, string).
+          @mini_test = FullW(true, '/mnt/c/Users/sudok', '/GitHub/sheltered-girl/mini_test')
+          @mini_unit = FullW(true, '/mnt/c/Users/sudok', '/GitHub/sheltered-girl/mini_unit')
+        else
+          # FullW, Switch ON / (true, string, string) for Ubuntu Other Linux Kernel.
+          @mini_test = FullW(true, '/home/takkii', '/GitHub/sheltered-girl/mini_test')
+          @mini_unit = FullW(true, '/home/takkii', '/GitHub/sheltered-girl/mini_unit')
+        end
       rescue
         tanraku_execute
       end
@@ -51,7 +57,7 @@ rescue
   puts 'Tanraku_VERSION: '.to_s + Tanraku::VERSION
   tanraku_execute
 ensure
-  GC.compact
+  GC.auto_compact
 end
 
 __END__
