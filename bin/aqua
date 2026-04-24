@@ -85,7 +85,6 @@ class EngineLeft
   end
 
   def self.date
-    require 'date'
     puts WatchDate.new.remove
   end
 
