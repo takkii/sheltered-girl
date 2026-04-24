@@ -55,7 +55,7 @@ rescue
   puts 'Tanraku_VERSION: '.to_s + Tanraku::VERSION
   tanraku_execute
 ensure
-  GC.compact
+  GC.auto_compact
 end
 
 __END__
