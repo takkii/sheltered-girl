@@ -237,8 +237,9 @@ begin
   end
 rescue Exception => e
   puts e.backtrace
+  tanraku_execute
 ensure
-  GC.compact
+  GC.auto_compact
 end
 
 __END__
