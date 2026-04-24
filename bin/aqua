@@ -95,11 +95,8 @@ class EngineLeft
     puts ' Feed End '.center(60, '-')
   end
 
-  def self.summa_xml
-    require 'summa.rb'
-    puts ' Summary Start '.center(60, '-')
-    Feed.new.jira
-    puts ' Summary end '.center(60, '-')
+  def self.not_found
+    puts '❎️ No function has been assigned.'
   end
 
   def self.version_info
@@ -188,7 +185,7 @@ begin
   elsif one.match?(a)
     EngineLeft.search_txi
   elsif one.match?(b)
-    EngineLeft.summa_xml
+    EngineLeft.not_found
   elsif one.match?(c)
     EngineLeft.calendar_view
   elsif one.match?(d)
