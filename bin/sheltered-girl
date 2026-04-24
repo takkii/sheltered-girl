@@ -251,8 +251,8 @@ module Sheltered_girl
     ruby convert encript use openssl.
     sha cript use case password.
 
-    $ aqua -r https://takkii.github.io/feed.xml
-    Display Title, GitHub Pages for takkii.
+    $ aqua -r
+    Date timestamp.
 
     $ aqua -s notojima.txt notojima
     String count search. String count in File.
