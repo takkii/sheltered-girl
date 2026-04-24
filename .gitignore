@@ -1,4 +1,11 @@
-/coverage
+# Ignore, RubyMine
 .idea/*
+
+# Ignore, Gemfile.lock
 Gemfile.lock
-zinbeijett-*.gem
+
+# Ignore, sheltered-girl-*.gem
+sheltered-girl-*.gem
+
+# Ignore.
+coverage/*
