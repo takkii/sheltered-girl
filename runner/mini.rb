@@ -18,13 +18,17 @@ class MiniTestFile
       rescue
         tanraku_execute
       end
-    when /darwin|mac os/
-      # Don't have Macintosh PC.
     when /linux/
       begin
-        # MiniW, Switch ON / (true, string, string).
-        @mini_test = MiniW(true, '/mnt/c/Users/sudok', '/GitHub/sheltered-girl/mini_test')
-        @mini_unit = MiniW(true, '/mnt/c/Users/sudok', '/GitHub/sheltered-girl/mini_unit')
+        if Dir.exist?('/mnt/c/Users/sudok')
+          # MiniW, Switch ON / (true, string, string).
+          @mini_test = MiniW(true, '/mnt/c/Users/sudok', '/GitHub/sheltered-girl/mini_test')
+          @mini_unit = MiniW(true, '/mnt/c/Users/sudok', '/GitHub/sheltered-girl/mini_unit')
+        else
+          # MiniW, Switch ON / (true, string, string).
+          @mini_test = MiniW(true, '/home/takkii', '/GitHub/sheltered-girl/mini_test')
+          @mini_unit = MiniW(true, '/home/takkii', '/GitHub/sheltered-girl/mini_unit')
+        end
       rescue
         tanraku_execute
       end
