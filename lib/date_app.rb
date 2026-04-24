@@ -12,5 +12,6 @@ class WatchDate
   end
 end
 
+puts WatchDate.new.remove
 # _posts date timestamp
 # 2025-01-13 13:39:34 +0900
