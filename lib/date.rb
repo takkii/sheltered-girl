@@ -1,5 +1,4 @@
 require 'date'
-require 'tanraku'
 
 class WatchDate
   attr_reader :app
