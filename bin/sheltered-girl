@@ -193,8 +193,8 @@ module Sheltered_girl
     $ aqua -a notojima.txt wajima
     AND Search.
 
-    $ aqua -b https://takkii.github.io/feed.xml
-    Display summary, GitHub Pages for takkii.
+    $ aqua -b
+    ❎️ No function has been assigned.
 
     $ aqua -c
     Calendar views. Today now.
