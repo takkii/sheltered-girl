@@ -84,9 +84,9 @@ class EngineLeft
     puts ''
   end
 
-  def self.title_rss
-    require 'title'
-    Title.new.views
+  def self.date
+    require 'date'
+    puts WatchDate.new.remove
   end
 
   def self.feed_xml
@@ -221,7 +221,7 @@ begin
   elsif one.match?(q)
     EngineLeft.decript_snowcat
   elsif one.match?(r)
-    EngineLeft.title_rss
+    EngineLeft.date
   elsif one.match?(s)
     EngineLeft.count_search
   elsif one.match?(t)
