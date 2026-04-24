@@ -85,7 +85,7 @@ class EngineLeft
   end
 
   def self.date
-    require 'data_app'
+    require 'date_app'
   end
 
   def self.feed_xml
