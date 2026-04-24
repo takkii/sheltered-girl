@@ -18,7 +18,7 @@ begin
     puts "BMI_VERSION : #{BMI_CLI::BMI_VERSION}"
     puts <<-EOF
 
-Copyright (c) 2024 - 2026 Takayuki Kamiyama
+Copyright (c) 2024 - #{(DateTime.now.year).to_s} Takayuki Kamiyama
 
     EOF
     puts 'STATUS'.center(60, '-')
