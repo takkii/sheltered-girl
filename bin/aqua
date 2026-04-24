@@ -86,7 +86,6 @@ class EngineLeft
 
   def self.date
     require 'data_app'
-    puts WatchDate.new.remove
   end
 
   def self.feed_xml
