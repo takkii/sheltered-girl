@@ -85,6 +85,7 @@ class EngineLeft
   end
 
   def self.date
+    require 'data_app'
     puts WatchDate.new.remove
   end
 
