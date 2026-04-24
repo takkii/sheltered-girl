@@ -7,8 +7,8 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require "#{File.dirname(__FILE__)}/../req/sheltered-girl"
 
-# zinbeijett loads.
-module Zinbeijett
+# sheltered-girl loads.
+module Sheltered-girl
   module_function
 
   def version
@@ -168,9 +168,9 @@ module Zinbeijett
 
     ア
 
-    [zinbeijett]
+    [sheltered-girl]
 
-    zinbeijett [ option ]
+    sheltered-girl [ option ]
 
     -s,start           Start page!
 
@@ -205,7 +205,7 @@ module Zinbeijett
     → The output disappeared by catching the exception.
 
     $ aqua -e
-    Tubuyaki clone ver. zinbeijett.
+    Tubuyaki clone ver.sheltered-girl
 
     $ aqua -f 2007 09
     Calendar views, select year and month.
@@ -283,12 +283,12 @@ module Zinbeijett
 
   def soft
     puts RUBY_DESCRIPTION
-    print 'On Zinbeijett Engine VERSION : '
+    print 'On sheltered-girl Engine VERSION : '
     puts EngineLeft.version
   end
 end
 
-include Zinbeijett
+include Sheltered-girl
 
 v = /\Aversion|\A-v\z/
 h = /\Alicense|\A-l\z/
@@ -314,4 +314,3 @@ end
 GC.start
 
 __END__
-
