@@ -39,6 +39,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency('simplecov', '~> 0.22')
   s.add_runtime_dependency('rinku', '~> 2.0')
   s.add_runtime_dependency('sanitize', '~> 7.0')
+  s.add_runtime_dependency('rice', '~> 4.12')
 
   if s.respond_to? :specification_version
     s.specification_version = 4
