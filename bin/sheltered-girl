@@ -194,7 +194,7 @@ module Sheltered_girl
     AND Search.
 
     $ aqua -b
-    ❎️ No function has been assigned.
+    Using rubygems/rice, Transplant himekuri2 function.
 
     $ aqua -c
     Calendar views. Today now.

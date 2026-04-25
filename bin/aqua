@@ -95,8 +95,8 @@ class EngineLeft
     puts ' Feed End '.center(60, '-')
   end
 
-  def self.not_found
-    puts '❎️ No function has been assigned.'
+  def self.himekuri2_run
+    require 'himekuri2'
   end
 
   def self.version_info
@@ -185,7 +185,7 @@ begin
   elsif one.match?(a)
     EngineLeft.search_txi
   elsif one.match?(b)
-    EngineLeft.not_found
+    EngineLeft.himekuri2_run
   elsif one.match?(c)
     EngineLeft.calendar_view
   elsif one.match?(d)
