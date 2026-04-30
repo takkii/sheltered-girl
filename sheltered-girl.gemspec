@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
   s.metadata["github_repo"] = "https://github.com/takkii/sheltered-girl"
 
   # If build error case, unless Gem.win_platform?
-  s.add_runtime_dependency('bundler', '~> 2.6')
+  s.add_runtime_dependency('bundler', '~> 4.0')
   s.add_runtime_dependency('dotenv', '~> 3.1')
   s.add_runtime_dependency('feedjira', '~> 3.2')
   s.add_runtime_dependency('httparty', '~> 0.23')
