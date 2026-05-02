@@ -22,8 +22,8 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.required_ruby_version = ['>= 3.0']
   s.required_rubygems_version = '~> 3.6.9' if s.respond_to? gem_version
-  s.summary = "This is a console application, a remake of zinbeiw."
-  s.description = "箱入り娘, All in One Packages."
+  s.summary = "I am set together prototype source code."
+  s.description = "Ruby User, Like to a girl who lives in a bubble."
   s.metadata["github_repo"] = "https://github.com/takkii/sheltered-girl"
 
   # If build error case, unless Gem.win_platform?
@@ -36,10 +36,10 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency('pry', '~> 0.15')
   s.add_runtime_dependency('pycall', '~> 1.5')
   s.add_runtime_dependency('rake', '~> 13.2')
-  s.add_runtime_dependency('simplecov', '~> 0.22')
+  s.add_runtime_dependency('rice', '~> 4.12') if !Gem.win_platform?
   s.add_runtime_dependency('rinku', '~> 2.0')
+  s.add_runtime_dependency('simplecov', '~> 0.22')
   s.add_runtime_dependency('sanitize', '~> 7.0')
-  s.add_runtime_dependency('rice', '~> 4.12')
 
   if s.respond_to? :specification_version
     s.specification_version = 4
