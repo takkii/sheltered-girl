@@ -16,10 +16,10 @@ begin
       puts e.backtrace
     end
   when /darwin|mac os/
-    require 'himekuri.o'
+    require 'himekuri2/himekuri.o'
     Himekuri.new.cal
   when /linux/
-    require 'himekuri.o'
+    require 'himekuri2/himekuri.o'
     Himekuri.new.cal
   end
 rescue StandardError => e
