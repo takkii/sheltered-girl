@@ -36,7 +36,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency('pry', '~> 0.15')
   s.add_runtime_dependency('pycall', '~> 1.5')
   s.add_runtime_dependency('rake', '~> 13.2')
-  s.add_runtime_dependency('rice', '~> 4.12') unless Gem.win_platform?
+  s.add_runtime_dependency('rice', '~> 4.12') unless !Gem.win_platform?
   s.add_runtime_dependency('rinku', '~> 2.0')
   s.add_runtime_dependency('simplecov', '~> 0.22')
   s.add_runtime_dependency('sanitize', '~> 7.0')
