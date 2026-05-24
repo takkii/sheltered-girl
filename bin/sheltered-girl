@@ -289,7 +289,7 @@ module Sheltered_girl
     puts EngineLeft.version
   end
 
-  def self.post
+  def post
     require 'json_post'
   end
 end
