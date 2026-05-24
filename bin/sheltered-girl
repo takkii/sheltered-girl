@@ -178,6 +178,8 @@ module Sheltered_girl
 
     -l,license         License information!
 
+    -p,post            JSON data post
+
     [aqua]
 
     < how to use >
@@ -286,10 +288,15 @@ module Sheltered_girl
     print 'On sheltered-girl Engine VERSION : '
     puts EngineLeft.version
   end
+
+  def self.post
+    require 'json_post'
+  end
 end
 
 include Sheltered_girl
 
+j = /\Apost|\A-p\z/
 v = /\Aversion|\A-v\z/
 h = /\Alicense|\A-l\z/
 s = /\Astart|\A-s\z/
@@ -307,6 +314,8 @@ elsif one.match?(s)
   start
 elsif one.match?(c)
   help
+elsif one.match?(j)
+  post
 else
   puts 'Please choose an option.'
 end
