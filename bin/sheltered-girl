@@ -320,6 +320,6 @@ else
   puts 'Please choose an option.'
 end
 
-GC.start
+GC.auto_compact
 
 __END__
