@@ -21,10 +21,10 @@ module Heart
     rescue LoadError => e
       puts e.backtrace
     ensure
-      GC.compact
+      GC.auto_compact
     end
   end
-  
+
   def creater
     require 'install'
     begin
@@ -32,7 +32,7 @@ module Heart
     rescue LoadError => e
       puts e.backtrace
     ensure
-      GC.compact
+      GC.auto_compact
     end
   end
 
@@ -43,7 +43,7 @@ module Heart
     rescue LoadError => e
       puts e.backtrace
     ensure
-      GC.compact
+      GC.auto_compact
     end
   end
 
@@ -54,7 +54,7 @@ module Heart
     rescue LoadError => e
       puts e.backtrace
     ensure
-      GC.compact
+      GC.auto_compact
     end
   end
 
@@ -65,18 +65,18 @@ module Heart
     rescue LoadError => e
       puts e.backtrace
     ensure
-      GC.compact
+      GC.auto_compact
     end
   end
 
-  def nyasocom3_downloader
+  def purplehaze_downloader
     require 'install'
     begin
-      InstallerRunner.nyasocom3_download
+      InstallerRunner.purplehaze_download
     rescue LoadError => e
       puts e.backtrace
     ensure
-      GC.compact
+      GC.auto_compact
     end
   end
 
@@ -87,7 +87,18 @@ module Heart
     rescue LoadError => e
       puts e.backtrace
     ensure
-      GC.compact
+      GC.auto_compact
+    end
+  end
+
+  def hyokaproject_downloader
+    require 'install'
+    begin
+      InstallerRunner.hyokaproject_download
+    rescue LoadError => e
+      puts e.backtrace
+    ensure
+      GC.auto_compact
     end
   end
 
@@ -98,7 +109,7 @@ module Heart
     rescue LoadError => e
       puts e.backtrace
     ensure
-      GC.compact
+      GC.auto_compact
     end
   end
 
@@ -109,7 +120,7 @@ module Heart
     rescue LoadError => e
       puts e.backtrace
     ensure
-      GC.compact
+      GC.auto_compact
     end
   end
 
@@ -120,7 +131,7 @@ module Heart
     rescue LoadError => e
       puts e.backtrace
     ensure
-      GC.compact
+      GC.auto_compact
     end
   end
 
@@ -145,8 +156,11 @@ heat ichi
 # nyasocom2 project template generated
 heat ni
 
-# nyasocom_sun_pg_win project template generated
-heat sun
+# purplehaze project template generated
+heat purple
+
+# hyokaproject templete generated
+heat hyoka
 
 # nyasocom_sun_app project template generated
 heat app
@@ -159,7 +173,7 @@ heat new example
 heat cook [Folder_Name]
 heat cook example
 
-# template generation for nyasocom_sun_pg_win
+# template generation for purplehaze
 heat create [Folder_Name]
 heat create example
 
@@ -188,8 +202,9 @@ i = /\Aichi\z/
 k = /\Acook\z/
 m = /\Amake\z/
 n = /\Anew\z/
-s = /\Asun\z/
+s = /\Apurple\z/
 t = /\Ani\z/
+o = /\Ahyoka\z/
 v = /\A[-][v]\z/
 
 one = ARGV[0]
@@ -215,17 +230,19 @@ elsif one.match?(m)
 elsif one.match?(n)
   installer
 elsif one.match?(s)
-  nyasocom3_downloader
+  purplehaze_downloader
 elsif one.match?(t)
   nyasocom2_downloader
 elsif one.match?(v)
   version
 elsif one.match?(d)
   databases
+elsif one.match?(o)
+  hyokaproject_downloader
 else
   puts 'No such option is found, please refer to the documentation.'
 end
 
-GC.compact
+GC.auto_compact
 
 __END__
