@@ -230,7 +230,7 @@ elsif one.match?(m)
 elsif one.match?(n)
   installer
 elsif one.match?(s)
-  nyasocom3_downloader
+  purplehaze_downloader
 elsif one.match?(t)
   nyasocom2_downloader
 elsif one.match?(v)
