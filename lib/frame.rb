@@ -69,10 +69,10 @@ module Heart
     end
   end
 
-  def nyasocom3_downloader
+  def purplehaze_downloader
     require 'install'
     begin
-      InstallerRunner.nyasocom3_download
+      InstallerRunner.purplehaze_download
     rescue LoadError => e
       puts e.backtrace
     ensure
