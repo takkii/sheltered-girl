@@ -15,7 +15,7 @@ class InstallerRunner
 
   def self.create
     encoding_style
-    nyasocom_sun_custom_name
+    purplehaze_custom_name
   end
 
   def self.cook
@@ -33,14 +33,19 @@ class InstallerRunner
     nyasocom2_command
   end
 
-  def self.nyasocom3_download
+  def self.purplehaze_download
     encoding_style
-    nyasocom3_command
+    purplehaze_command
   end
 
   def self.nyasocom_app_download
     encoding_style
     nyasocom_app_command
+  end
+
+  def self.hyokaproject_download
+    encoding_style
+    hyokaproject
   end
 
   def self.appmakers
@@ -115,19 +120,19 @@ Used nyasocom_frame to clone nyasocom2 with any project name.
     EOF
   end
 
-  def self.nyasocom_sun_custom_name
+  def self.purplehaze_custom_name
     sun = ARGV[1]
     FileUtils.mkdir_p("./#{sun}")
     FileUtils.cd("./#{sun}")
-    if system('git clone git@github.com:takkii/nyasocom_sun_pg_win.git .', exception: true)
+    if system('git clone git@github.com:takkii/purplehaze.git .', exception: true)
     else
-      system('git clone https://github.com:takkii/nyasocom_sun_pg_win.git .')
+      system('git clone https://github.com:takkii/purplehaze.git .')
     end
     FileUtils.rm_rf("./.git")
     FileUtils.rm_rf("./.github")
     puts <<-EOF
 
-Used nyasocom_frame to clone nyasocom_sun_pg_win with any project name.
+Used nyasocom_frame to clone purplehaze with any project name.
 
     EOF
   end
@@ -177,17 +182,17 @@ Cloned nyasocom2 with nyasocom_frame.
     EOF
   end
 
-  def self.nyasocom3_command
-    if system('git clone git@github.com:takkii/nyasocom_sun_pg_win.git', exception: true)
+  def self.purplehaze_command
+    if system('git clone git@github.com:takkii/purplehaze.git', exception: true)
     else
-      system('git clone https://github.com:takkii/nyasocom_sun_pg_win.git')
+      system('git clone https://github.com:takkii/purplehaze.git')
     end
-    FileUtils.cd("./nyasocom_sun_pg_win")
+    FileUtils.cd("./purplehaze")
     FileUtils.rm_rf("./.git")
     FileUtils.rm_rf("./.github")
     puts <<-EOF
 
-Cloned nyasocom_sun_pg_win with nyasocom_frame.
+Cloned purplehaze with nyasocom_frame.
 
     EOF
   end
@@ -203,6 +208,21 @@ Cloned nyasocom_sun_pg_win with nyasocom_frame.
     puts <<-EOF
 
 Cloned nyasocom_sun_app with nyasocom_frame.
+
+    EOF
+  end
+
+  def self.hyokaproject
+    if system('git clone git@github.com:takkii/hyokaproject.git', exception: true)
+    else
+      system('git clone https://github.com:takkii/hyokaproject.git')
+    end
+    FileUtils.cd("./hyokaproject")
+    FileUtils.rm_rf("./.git")
+    FileUtils.rm_rf("./.github")
+    puts <<-EOF
+
+Cloned hyokaproject with nyasocom_frame.
 
     EOF
   end
