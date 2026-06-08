@@ -138,7 +138,7 @@ module Hearts
 
 
   def default
-    str = 'nyasocom_frame is a framework for generating web applications. '
+    str = 'nyasocom_frame is a framework, generating templete for existing github project.'
     puts str
   end
 
@@ -151,10 +151,10 @@ heats
 heats -v
 
 # nyasocom_oss project template generated
-heats ichi
+heats oss
 
 # nyasocom_two project template generated
-heats ni
+heats two
 
 # purplehaze project template generated
 heats purple
@@ -198,12 +198,12 @@ b = /\Abranch\z/
 c = /\Acreate\z/
 d = /\Adb\z/
 h = /\A[-][h]\z/
-i = /\Aichi\z/
+i = /\Aoss\z/
 k = /\Acook\z/
 m = /\Amake\z/
 n = /\Anew\z/
 s = /\Apurple\z/
-t = /\Ani\z/
+t = /\Atwo\z/
 o = /\Ahyoka\z/
 v = /\A[-][v]\z/
 
