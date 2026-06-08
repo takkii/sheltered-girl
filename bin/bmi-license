@@ -99,9 +99,9 @@ begin
 
   if one.nil?
     puts ''
-    puts 'This bmi project is MIT license.'
+    puts 'This bmi project is MIT LICENSE.'
     puts ''
-    puts 'All Option, bmi-license -l | bmi-license license && bmi-license -r | bmi-license read.'
+    puts 'bmi-license -l LICENSE.txt | bmi-license license LICENSE.txt | bmi-license -r | bmi-license read.'
     puts ''
   elsif one.match?(l)
     MIT.license
@@ -113,7 +113,7 @@ begin
 rescue StandardError => e
   puts e.backtrace
 ensure
-  GC.compact
+  GC.auto_compact
 end
 
 __END__
