@@ -9,10 +9,11 @@ class MIT
 
   def self.license
     encoding_style
+    one = ARGV[1]
     puts ''
     puts ' LICENSE '.center(60, '-')
     puts ''
-    File.open("../LICENSE.txt", 'r') do |f|
+    File.open(one, 'r') do |f|
       f.each_line do |line|
         puts line
       end
