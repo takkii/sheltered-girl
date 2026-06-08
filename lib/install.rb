@@ -20,7 +20,7 @@ class InstallerRunner
 
   def self.cook
     encoding_style
-    nyasocom2_custom_name
+    nyasocom_two_custom_name
   end
 
   def self.download
@@ -28,9 +28,9 @@ class InstallerRunner
     nyasocom_command
   end
 
-  def self.nyasocom2_download
+  def self.nyasocom_two_download
     encoding_style
-    nyasocom2_command
+    nyasocom_two_command
   end
 
   def self.purplehaze_download
@@ -103,19 +103,19 @@ Used nyasocom_frame to clone nyasocom_oss with any project name.
     EOF
   end
 
-  def self.nyasocom2_custom_name
+  def self.nyasocom_two_custom_name
     two = ARGV[1]
     FileUtils.mkdir_p("./#{two}")
     FileUtils.cd("./#{two}")
-    if system('git clone git@github.com:takkii/nyasocom2.git .', exception: true)
+    if system('git clone git@github.com:takkii/nyasocom_two.git .', exception: true)
     else
-      system('git clone https://github.com:takkii/nyasocom2.git .')
+      system('git clone https://github.com:takkii/nyasocom_two.git .')
     end
     FileUtils.rm_rf("./.git")
     FileUtils.rm_rf("./.github")
     puts <<-EOF
 
-Used nyasocom_frame to clone nyasocom2 with any project name.
+Used nyasocom_frame to clone nyasocom_two with any project name.
 
     EOF
   end
@@ -167,17 +167,17 @@ Cloned nyasocom_pg with nyasocom_frame.
     EOF
   end
 
-  def self.nyasocom2_command
-    if system('git clone git@github.com:takkii/nyasocom2.git', exception: true)
+  def self.nyasocom_two_command
+    if system('git clone git@github.com:takkii/nyasocom_two.git', exception: true)
     else
-      system('git clone https://github.com:takkii/nyasocom2.git')
+      system('git clone https://github.com:takkii/nyasocom_two.git')
     end
-    FileUtils.cd("./nyasocom2")
+    FileUtils.cd("./nyasocom_two")
     FileUtils.rm_rf("./.git")
     FileUtils.rm_rf("./.github")
     puts <<-EOF
 
-Cloned nyasocom2 with nyasocom_frame.
+Cloned nyasocom_two with nyasocom_frame.
 
     EOF
   end

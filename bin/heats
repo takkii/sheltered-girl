@@ -8,7 +8,7 @@ begin
 rescue StandardError => e
   puts e.backtrace
 ensure
-  GC.compact
+  GC.auto_compact
 end
 
 __END__

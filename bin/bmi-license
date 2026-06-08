@@ -9,16 +9,17 @@ class MIT
 
   def self.license
     encoding_style
+    one = ARGV[1]
     puts ''
-    puts ' LICENSE '.center(60, '-')
+    puts ' READING LIST '.center(60, '-')
     puts ''
-    File.open("./LICENSE.txt", 'r') do |f|
+    File.open(one, 'r') do |f|
       f.each_line do |line|
         puts line
       end
     end
     puts ''
-    puts ' LICENSE '.center(60, '-')
+    puts ' READING LIST '.center(60, '-')
     puts ''
   end
 
@@ -97,11 +98,15 @@ begin
   r = /\Aread|\A-r\z/
 
   if one.nil?
-    puts ''
-    puts 'This bmi project is MIT license.'
-    puts ''
-    puts 'All Option, bmi-license -l | bmi-license license && bmi-license -r | bmi-license read.'
-    puts ''
+    puts <<-EOF
+bmi-license -l LICENSE.txt
+
+bmi-license license LICENSE.txt
+
+bmi-license -r
+
+bmi-license read
+    EOF
   elsif one.match?(l)
     MIT.license
   elsif one.match?(r)
@@ -112,7 +117,7 @@ begin
 rescue StandardError => e
   puts e.backtrace
 ensure
-  GC.compact
+  GC.auto_compact
 end
 
 __END__

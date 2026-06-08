@@ -5,8 +5,8 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require "#{File.dirname(__FILE__)}/../req/frame"
 
-# Heat module
-module Heart
+# heats module
+module Hearts
   module_function
 
   def version
@@ -58,10 +58,10 @@ module Heart
     end
   end
 
-  def nyasocom2_downloader
+  def nyasocom_two_downloader
     require 'install'
     begin
-      InstallerRunner.nyasocom2_download
+      InstallerRunner.nyasocom_two_download
     rescue LoadError => e
       puts e.backtrace
     ensure
@@ -138,57 +138,57 @@ module Heart
 
 
   def default
-    str = 'nyasocom_frame is a framework for generating web applications. '
+    str = 'nyasocom_frame is a framework, generating templete for existing github project.'
     puts str
   end
 
   def documents
     puts text = <<-EOS
 # nyasocom framework information
-heat
+heats
 
 # version notation
-heat -v
+heats -v
 
 # nyasocom_oss project template generated
-heat ichi
+heats oss
 
-# nyasocom2 project template generated
-heat ni
+# nyasocom_two project template generated
+heats two
 
 # purplehaze project template generated
-heat purple
+heats purple
 
 # hyokaproject templete generated
-heat hyoka
+heats hyoka
 
 # nyasocom_sun_app project template generated
-heat app
+heats app
 
 # template generation for nyasocom_oss
-heat new [Folder_Name]
-heat new example
+heats new [Folder_Name]
+heats new example
 
-# template generation for nyasocom2
-heat cook [Folder_Name]
-heat cook example
+# template generation for nyasocom_two
+heats cook [Folder_Name]
+heats cook example
 
 # template generation for purplehaze
-heat create [Folder_Name]
-heat create example
+heats create [Folder_Name]
+heats create example
 
 # nyasocom_pg project template generated
-heat db postgresql
-heat db --pg
+heats db postgresql
+heats db --pg
 
 # github project templete generated
-heat make nyasocom takkii nyasocom_oss
+heats make nyasocom takkii nyasocom_oss
 
 # github project templete generated + branch_name
-heat branch nyasocom takkii nyasocom_oss main
+heats branch nyasocom takkii nyasocom_oss main
 
 # HELP
-heat -h
+heats -h
 EOS
   end
 end
@@ -198,18 +198,18 @@ b = /\Abranch\z/
 c = /\Acreate\z/
 d = /\Adb\z/
 h = /\A[-][h]\z/
-i = /\Aichi\z/
+i = /\Aoss\z/
 k = /\Acook\z/
 m = /\Amake\z/
 n = /\Anew\z/
 s = /\Apurple\z/
-t = /\Ani\z/
+t = /\Atwo\z/
 o = /\Ahyoka\z/
 v = /\A[-][v]\z/
 
 one = ARGV[0]
 
-include Heart
+include Hearts
 
 if one.nil?
   default
@@ -232,7 +232,7 @@ elsif one.match?(n)
 elsif one.match?(s)
   purplehaze_downloader
 elsif one.match?(t)
-  nyasocom2_downloader
+  nyasocom_two_downloader
 elsif one.match?(v)
   version
 elsif one.match?(d)
