@@ -98,11 +98,15 @@ begin
   r = /\Aread|\A-r\z/
 
   if one.nil?
-    puts ''
-    puts 'This bmi project is MIT LICENSE.'
-    puts ''
-    puts 'bmi-license -l LICENSE.txt | bmi-license license LICENSE.txt | bmi-license -r | bmi-license read.'
-    puts ''
+    puts <<-EOF
+bmi-license -l LICENSE.txt
+
+bmi-license license LICENSE.txt
+
+bmi-license -r
+
+bmi-license read
+    EOF
   elsif one.match?(l)
     MIT.license
   elsif one.match?(r)
