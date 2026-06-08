@@ -11,7 +11,7 @@ class MIT
     encoding_style
     one = ARGV[1]
     puts ''
-    puts ' LICENSE '.center(60, '-')
+    puts ' READING LIST '.center(60, '-')
     puts ''
     File.open(one, 'r') do |f|
       f.each_line do |line|
@@ -19,7 +19,7 @@ class MIT
       end
     end
     puts ''
-    puts ' LICENSE '.center(60, '-')
+    puts ' READING LIST '.center(60, '-')
     puts ''
   end
 
