@@ -1,0 +1,9 @@
+cd sheltered-girl
+ruby ./runner/mini.rb
+
+> C:/Ruby40-x64/lib/ruby/4.0.0/rubygems/specification.rb:2202:in 'Gem::Specification#raise_if_conflicts': Unable to activate sheltered-girl-4.0.8.4, because minitest-6.0.0 conflicts with minitest (~> 5.25) (Gem::ConflictError)
+
+sudo gem uninstall minitest
+
+minitest version select v6.0.0 deleted.
+

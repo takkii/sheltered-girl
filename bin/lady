@@ -15,7 +15,7 @@ module Sheltered_girl
     puts '[ version ]'.center(60, '-')
     puts ''
     print 'Sheltered-girl VERSION : '
-    puts EngineLeft.version
+    puts "#{EngineLeft.version}"
     puts ''
     puts '[ version ]'.center(60, '-')
   end
@@ -27,11 +27,9 @@ module Sheltered_girl
     puts <<-DOC
     == Contributing to sheltered-girl
 
-    GitHub account  : takkii
+    Special Thanks,
 
-    ** Spectacle **
-
-    Improve zinbeiw find function to work on the command line.
+    Copyright c 2007-2026 Author Takayuki Kamiyama.
 
     ** version info **
 
@@ -45,7 +43,9 @@ module Sheltered_girl
 
     zinbeijett core : 3.x.x
 
-    sheltered-girl version : 4.x.x
+    sheltered-girl/lady version : 4.x.x.x,
+
+    * current version is sponsor record numbers.
 
     > Thank you for reading to the last.
     DOC
@@ -54,7 +54,7 @@ module Sheltered_girl
     puts ''
   end
 
-  def licen
+  def licenceed
     puts ''
     puts 'License'.center(60, '-')
     puts <<-HOW
@@ -100,15 +100,33 @@ module Sheltered_girl
 
     puts <<-HELP
 
+    [zinbei]
+    Please input command, views more options.
+    zinbei -h / zinbei -s
+    zinbei -v
+    1.8.2 : [FINISH-MAN]
+
+    [rupture]
+    balance
+-------------------------- Thanks --------------------------
+
+    rupture project is memorial tanraku project.
+
+    Special Thanks, Copyright c 2010-2024 Author Takayuki Kamiyama
+
+-------------------------- Thanks --------------------------
+    balance -c
+    balance -t
+    balance -h/help
+
+    [shima]
+    shima
+    Shima Enaga core in Grouse VERSION: 1.1.7.1
+    shima -h
+
     [tweet]
     aqua -l → tweet
     Twitter_tubuyaki tools.
-
-    [speak]
-
-    Now version is zinbeiw (= 1.4.3.1) clone.
-
-    Plus amaoto function.
 
     [tenji]
 
@@ -168,9 +186,9 @@ module Sheltered_girl
 
     ア
 
-    [sheltered-girl]
+    [lady]
 
-    sheltered-girl [ option ]
+    lady [ option ]
 
     -s,start           Start page!
 
@@ -304,22 +322,27 @@ c = /\Ahelp|\A-h\z/
 
 one = ARGV[0]
 
-if one.nil?
-  soft
-elsif one.match?(v)
-  version
-elsif one.match?(h)
-  licen
-elsif one.match?(s)
-  start
-elsif one.match?(c)
-  help
-elsif one.match?(j)
-  post
-else
-  puts 'Please choose an option.'
+begin
+  if one.nil?
+    soft
+  elsif one.match?(v)
+    version
+  elsif one.match?(h)
+    licenceed
+  elsif one.match?(s)
+    start
+  elsif one.match?(c)
+    help
+  elsif one.match?(j)
+    post
+  else
+    puts 'Please choose an option.'
+  end
+rescue Exception => e
+  puts e.backtrace
+  tanraku_execute
+ensure
+  GC.auto_compact
 end
-
-GC.auto_compact
 
 __END__

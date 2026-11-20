@@ -11,7 +11,7 @@ require 'rbconfig'
 # --------------------------------------
 # dependency library myself
 require 'bmi'
-require 'tanraku'
+require 'persona'
 # --------------------------------------
 # minitest-runner
 require 'minitest/full_runner'

@@ -2,7 +2,7 @@
 
 # --------------------------------------
 require 'bmi'
-require 'tanraku'
+require 'persona'
 require 'timeout'
 # --------------------------------------
 encoding_style

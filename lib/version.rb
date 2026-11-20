@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require 'tanraku'
+require 'persona'
 
 # minitest, version 4 < 5 no match.
 class EngineLeft
   def self.version
     # 'x.x.x.x'.to_s < '5.x.x.x'.to_s
-    '4.0.8.3'.to_s
+    '4.1.0'.to_s.freeze
   end
 end
 

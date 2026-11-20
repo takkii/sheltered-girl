@@ -1,0 +1,106 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+# -*- coding: utf-8 -*-
+# vim: filetype=ruby
+
+Encoding.default_internal = 'UTF-8'
+Encoding.default_external = 'UTF-8'
+
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require 'persona'
+
+# Balance loads.
+module Balance
+  module_function
+
+  def score_require
+    require 'score'
+  end
+
+  def service_message
+    puts ' Thanks '.center(60, '-')
+    puts <<-DOC
+
+    rupture project is memorial tanraku project.
+
+    Special Thanks, Copyright c 2010-2024 Author Takayuki Kamiyama.
+
+    DOC
+    puts ' Thanks '.center(60, '-')
+  end
+
+  def help
+    puts ''
+    puts ' help '.center(60, '-')
+
+    puts <<-DOC
+
+    == Contributing to rupture
+
+    - airplain projects is source management, In USB memory stick.
+
+    # Persona Class and Isora Method / Other Class and Method.
+
+    Isora = Class.new(Persona)
+    Persona.new.gun
+
+    YouError = Class.new(ScriptError)
+    Nekonyan.new.bocchi
+
+    WhoError = Class.new(SignalException)
+    Ranko.new.sassin
+
+    CatError = Class.new(NoMemoryError)
+    CatError.new.kill
+
+    DogError = Class.new(SystemExit)
+    DogError.new.gohan
+
+    DOC
+
+    puts ' help '.center(60, '-')
+    puts ''
+ end
+
+  def checker
+    begin
+      MyError; Isora; Zarigani; Atorantis
+    rescue Exception => e
+      puts "#{e.class} : #{e.message}".to_s
+      tanraku_exit
+    ensure
+      puts 'Anything elses throws Exception, It will be searched for mine.'.to_s
+    end
+  end
+end
+
+include Balance
+
+h = /\Ahelp|\A-h\z/
+c = /\A-c\z/
+t = /\A-t\z/
+
+one = ARGV[0]
+
+begin
+  if one.nil?
+    service_message
+  elsif one.match?(h)
+    help
+  elsif one.match?(c)
+    checker
+  elsif one.match?(t)
+    score_require
+  else
+    puts 'Does not command founded, [help/-h -c -t] each others.'.to_s
+  end
+rescue Exception => ext
+  Persona.new.gun
+  tanraku_exit
+ensure
+  GC.auto_compact
+end
+
+__END__

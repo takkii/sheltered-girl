@@ -2,6 +2,6 @@
 
 # --------------------------------------
 require 'open3'
-require 'tanraku'
+require 'persona'
 require 'bmi'
 # --------------------------------------

@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.name = "sheltered-girl"
   s.version = EngineLeft.version
   s.authors = ["Takayuki Kamiyama"]
-  s.email = "karuma.reason@gmail.com"
+  s.email = "postmaster@pieceofshop@sakura.ne.jp"
   s.extra_rdoc_files = [
     "LICENSE.txt",
   ]
@@ -18,12 +18,12 @@ Gem::Specification.new do |s|
   s.files = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(mini_test|mini_unit)/}) }
   s.executables = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
   s.homepage = "https://github.com/takkii/sheltered-girl"
-  s.licenses = ["MIT"]
+  s.licenses = ["original"]
   s.require_paths = ["lib"]
   s.required_ruby_version = ['>= 3.0']
   s.required_rubygems_version = '~> 3.6.9' if s.respond_to? gem_version
-  s.summary = "I am set together prototype source code."
-  s.description = "Ruby User, Like to a girl who lives in a bubble."
+  s.summary = "Original Code is Certificate Program."
+  s.description = "Using Ruby programmer 'Sapphire'"
   s.metadata["github_repo"] = "https://github.com/takkii/sheltered-girl"
 
   # If build error case, unless Gem.win_platform?

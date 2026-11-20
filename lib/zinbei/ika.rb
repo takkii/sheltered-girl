@@ -1,0 +1,13 @@
+# coding: sjis
+
+# frozen_string_literal: true
+
+a = rand(15)
+print 'Å`'
+i = 0
+i < a
+0.step(a) do |_|
+  print 'Å`'
+end
+puts 'ÅÉÉRÅFúc'
+puts

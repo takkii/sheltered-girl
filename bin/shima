@@ -1,0 +1,73 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+# vim: filetype=ruby
+
+require 'grouse'
+require 'persona'
+require 'socket'
+
+# Shima-Enaga core in Grouse/lib
+class Shima_Enaga
+  def self.version
+    puts "Shima Enaga core in Grouse VERSION: #{core_version}"
+  end
+
+  def self.help
+    puts 'HELP'.center(60, '-')
+    puts ''
+    puts 'shima'
+    puts ''
+    Shima_Enaga.version
+    puts ''
+    puts 'shima -a'
+    puts ''
+    puts "#{udp_socket}"
+    puts ''
+    puts 'shima -b'
+    puts ''
+    puts "#{list_socket}"
+    puts ''
+    puts 'shima -c'
+    puts ''
+    puts "#{eq_socket}"
+    puts ''
+    puts 'shima -d'
+    puts ''
+    puts "#{koyomi}"
+    puts ''
+    puts 'HELP'.center(60, '-')
+  end
+end
+
+one = ARGV[0]
+
+a = /\A[-][a]\z/
+b = /\A[-][b]\z/
+c = /\A[-][c]\z/
+d = /\A[-][d]\z/
+h = /\A[-][h]\z/
+
+begin
+  if one.nil?
+    Shima_Enaga.version
+  elsif one.match?(a)
+    puts "#{udp_socket}"
+  elsif one.match?(b)
+    puts "#{list_socket}"
+  elsif one.match?(c)
+    puts "#{eq_socket}"
+  elsif one.match?(d)
+    puts "#{koyomi}"
+  elsif one.match?(h)
+    Shima_Enaga.help
+  else
+    puts 'Not Found, Please input shima -h Commands.'
+  end
+rescue Exception => e
+  puts e.backtrace
+  tanraku_execute
+ensure
+  GC.auto_compact
+end
+
+__END__
