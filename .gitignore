@@ -5,7 +5,7 @@
 Gemfile.lock
 
 # Ignore, sheltered-girl-*.gem
-sheltered-girl-*.gem
+# sheltered-girl-*.gem
 
 # Ignore.
 coverage/*
