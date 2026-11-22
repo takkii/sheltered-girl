@@ -1,4 +1,10 @@
-## 環境構築
+<div align="center">
+    <p><h1>sheltered-girl.</h1></p>
+    <img src="../images/nyasocom_two.gif" alt="logos">
+</div>
+
+
+### 環境構築
 
 ```ruby
 gem install sheltered-girl-4.0.8.6.gem
