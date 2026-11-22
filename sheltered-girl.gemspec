@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.files = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(mini_test|mini_unit)/}) }
   s.executables = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
   s.homepage = "https://github.com/takkii/sheltered-girl"
-  s.licenses = ["original"]
+  s.licenses = ["Vim"]
   s.require_paths = ["lib"]
   s.required_ruby_version = ['>= 3.0']
   s.required_rubygems_version = '~> 3.6.9' if s.respond_to? gem_version
