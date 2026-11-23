@@ -4,6 +4,6 @@
   <p><h1> sheltered-girl. </h1></p>
   <img src="./images/team-ragnarok-mrk3.1.gif" alt="ragnarok_logos">
   <p><h3> Please README, See the <a href="https://github.com/takkii/sheltered-girl/wiki/manual">wiki</a>.</h3></p>
-  <h4><p> © 2026 (oct) MIT License expired, Next Vim License.</p></h4>
+  <p><h4> © 2026 (oct) MIT License expired, Next Vim License.</h4></p>
   <br />
 </div>
