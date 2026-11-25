@@ -1,0 +1,45 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+# -*- coding: utf-8 -*-
+# vim: filetype=ruby
+
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require 'persona'
+
+# Balance loads.
+module Balance
+  module_function
+
+  def service_message
+    puts ' Thanks '.center(60, '-')
+    puts <<-DOC
+
+    Special Thanks, Copyright c 2010-2024 Author Takayuki Kamiyama.
+
+    DOC
+    puts ' Thanks '.center(60, '-')
+
+    require "#{File.dirname(__FILE__)}/../lib/mevius"
+  end
+end
+
+include Balance
+
+one = ARGV[0]
+
+begin
+  if one.nil?
+    service_message
+  else
+    puts 'Does not command founded'.to_s
+  end
+rescue Exception => ext
+  Persona.new.gun
+  tanraku_exit
+ensure
+  GC.auto_compact
+end
+
+__END__

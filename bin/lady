@@ -99,6 +99,8 @@ module Sheltered_girl
     puts 'Command'.center(60, '-')
 
     puts <<-HELP
+    [mandel]
+    Mandelbrot set
 
     [zinbei]
     Please input command, views more options.
