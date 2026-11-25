@@ -8,18 +8,20 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'persona'
 
-# Balance loads.
+# Balance Copy.
 module Balance
   module_function
 
   def service_message
+    puts ''
     puts ' Thanks '.center(60, '-')
     puts <<-DOC
 
-    Special Thanks, Copyright c 2010-2024 Author Takayuki Kamiyama.
+  Special Thanks, Copyright © 2010-2024 Takayuki Kamiyama.
 
     DOC
     puts ' Thanks '.center(60, '-')
+    puts ''
 
     require "#{File.dirname(__FILE__)}/../lib/mevius"
   end
@@ -35,7 +37,8 @@ begin
   else
     puts 'Does not command founded'.to_s
   end
-rescue Exception => ext
+rescue Exception => e
+  puts "#{e.backtrace}"
   Persona.new.gun
   tanraku_exit
 ensure
