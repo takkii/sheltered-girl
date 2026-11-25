@@ -6,7 +6,7 @@ require 'persona'
 class EngineLeft
   def self.version
     # 'x.x.x.x'.to_s < '5.x.x.x'.to_s
-    '4.1.2'.to_s.freeze
+    '4.1.3'.to_s.freeze
   end
 end
 
