@@ -42,7 +42,7 @@ begin
 rescue Exception => e
     puts "#{e.backtrace}"
     Persona.new.gun
-    tanraku_log
+    tanraku_exit
 ensure
     GC.auto_compact
 end
