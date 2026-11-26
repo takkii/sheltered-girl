@@ -14,7 +14,10 @@ module Zinbei
 
   def version
     require 'zinbei/serial'
+    require 'zinbei/ika'
     puts zinbei_version
+    puts ''
+    puts Claken.ika
   end
 
   def start
@@ -86,7 +89,6 @@ include Zinbei
 if one.nil?
   soft
 elsif one.match?(v)
-  require 'zinbei/ika'
   version
 elsif one.match?(ve)
   version
