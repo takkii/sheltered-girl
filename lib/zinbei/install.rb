@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 #!/usr/bin/ruby
 
+require 'bmi'
 require 'fileutils'
 require 'persona'
 
-Encoding.default_internal = 'UTF-8'
-Encoding.default_external = 'UTF-8'
+encoding_style
 
 # Installer runner.
 class InstallerRunner

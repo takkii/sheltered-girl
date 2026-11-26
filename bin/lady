@@ -61,7 +61,7 @@ module Sheltered_girl
 
     The MIT License
 
-    Copyright (c) 2013 - #{(DateTime.now.year).to_s} Takayuki Kamiyama
+    Copyright © 2013 - #{(DateTime.now.year).to_s} Takayuki Kamiyama
 
     Permission is hereby granted, free of charge,
     to any person obtaining a copy of this software and
@@ -106,7 +106,7 @@ module Sheltered_girl
     Please input command, views more options.
     zinbei -h / zinbei -s
     zinbei -v
-    1.8.2 : [FINISH-MAN]
+    3.0.0 : [FINISH-MAN]
 
     [rupture]
     balance
@@ -114,7 +114,9 @@ module Sheltered_girl
 
     rupture project is memorial tanraku project.
 
-    Special Thanks, Copyright c 2010-2024 Author Takayuki Kamiyama
+    Special Thanks,
+
+    Copyright © 2010-2024 Author Takayuki Kamiyama
 
 -------------------------- Thanks --------------------------
     balance -c

@@ -3,12 +3,10 @@
 # -*- coding: utf-8 -*-
 # vim: filetype=ruby
 
-Encoding.default_internal = 'UTF-8'
-Encoding.default_external = 'UTF-8'
-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
+require 'bmi'
 require 'persona'
 
 # Balance loads.
@@ -16,10 +14,12 @@ module Balance
   module_function
 
   def score_require
+    encoding_style
     require 'score'
   end
 
   def service_message
+    encoding_style
     puts ' Thanks '.center(60, '-')
     puts <<-DOC
 
@@ -32,6 +32,7 @@ module Balance
   end
 
   def help
+    encoding_style
     puts ''
     puts ' help '.center(60, '-')
 
@@ -66,6 +67,7 @@ module Balance
 
   def checker
     begin
+      encoding_style
       MyError; Isora; Zarigani; Atorantis
     rescue Exception => e
       puts "#{e.class} : #{e.message}".to_s
@@ -94,6 +96,7 @@ begin
   elsif one.match?(t)
     score_require
   else
+    encoding_style
     puts 'Does not command founded, [help/-h -c -t] each others.'.to_s
   end
 rescue Exception => ext
