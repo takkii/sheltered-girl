@@ -14,6 +14,7 @@ module Zinbei
 
   def version
     require 'zinbei/serial'
+    puts zinbei_version
   end
 
   def start
