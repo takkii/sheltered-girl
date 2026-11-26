@@ -4,7 +4,7 @@ module Serial
     module_function
 
     def zinbei_version
-        "#{Zinbei::VERSION : [FINISH-MAN]}"
+        "#{Zinbei::VERSION} : [FINISH-MAN]"
     end
 end
 
