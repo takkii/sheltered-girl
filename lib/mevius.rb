@@ -3,6 +3,9 @@
 require 'persona'
 require 'complex'
 
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
 # mandelbort set
 class Set
     def self.mandelbrot(cr, ci)

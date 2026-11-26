@@ -1,9 +1,11 @@
+puts ''
 puts 'LICENSE'.center(60, '-')
+puts ''
 
-    puts '
+    puts <<-DOC
     The MIT License
 
-    Copyright (c) 2016 - 2022 Takayuki Kamiyama
+    Copyright © 2016 - 2022 Takayuki Kamiyama
 
     Permission is hereby granted, free of charge,
     to any person obtaining a copy of this software and
@@ -29,5 +31,8 @@ puts 'LICENSE'.center(60, '-')
     WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
     ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
     OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-    '
+    DOC
+
+puts ''
 puts 'LICENSE'.center(60, '-')
+puts ''

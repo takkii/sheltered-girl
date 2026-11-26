@@ -1,13 +1,27 @@
-# coding: sjis
-
 # frozen_string_literal: true
 
-a = rand(15)
-print 'Å`'
-i = 0
-i < a
-0.step(a) do |_|
-  print 'Å`'
+class Claken
+  def self.ika
+    a = rand(15)
+    print 'ÔΩû'
+    i = 0
+    i < a
+
+    0.step(a) do |_|
+      print 'ÔΩû'
+    end
+
+    puts 'Ôºú„Ç≥ÔºöÂΩ°'
+    puts ''
+  end
 end
-puts 'ÅÉÉRÅFúc'
-puts
+
+begin
+  Claken.ika
+rescue Exception => e
+  puts "#{e.backtrace}"
+ensure
+  GC.auto_compact
+end
+
+__END__

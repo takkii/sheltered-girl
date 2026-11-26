@@ -4,7 +4,7 @@ module Zinbei
   VERSION = '3.0.0'.to_s.freeze
 end
 
-# zinbei version change log
+# [Change logs]
 # 3.x.x ~ Finish-man, This project is Endroll.
 # 2.x.x ~ GitLab is start, Please buy new License.
 # 1.9.x ~ next version 2.x.x, stop version 1.10.x
@@ -16,8 +16,8 @@ end
 # 1.3.0 ~ ViVi outside script → delete to reiwa problem.
 # 1.2.4 ~ rubyist_version.
 # 1.2.3 ~ MileStone_version
-# 0.x   ~ zero_version
+# 0.x.x ~ zero_version
 
-GC.compact
+GC.auto_compact
 
 __END__
