@@ -9,7 +9,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 class EngineLeft
   def self.version
     # 'x.x.x.x'.to_s < '5.x.x.x'.to_s
-    '4.1.4'.to_s.freeze
+    '4.1.4.1'.to_s.freeze
   end
 end
 
