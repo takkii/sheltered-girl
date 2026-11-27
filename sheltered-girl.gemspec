@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.name = "sheltered-girl"
   s.version = EngineLeft.version
   s.authors = ["Takayuki Kamiyama"]
-  s.email = "postmaster@pieceofshop@sakura.ne.jp"
+  s.email = "karuma.reason@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
   ]
