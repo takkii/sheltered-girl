@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.required_ruby_version = ['>= 3.0']
   s.required_rubygems_version = '~> 3.6.9' if s.respond_to? gem_version
   s.summary = "Freelance memorial source code."
-  s.description = "This project is sheltered-girl full packages."
+  s.description = "This project is sheltered-girl full complete packages."
   s.metadata["github_repo"] = "https://github.com/takkii/sheltered-girl"
 
   # If build error case, unless Gem.win_platform?
